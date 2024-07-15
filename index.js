@@ -6,7 +6,7 @@ const issues = require('./Routes/issues')
 const projects = require('./Routes/projects')
 const app = express();
 const cors = require('cors');
-const uri = "mongodb+srv://durgesh3103:xBWy6cCaAuRXYs4F@cluster0.ddmetjw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri)
     .then(() => console.log("Successfully connected to MongoDB"))
